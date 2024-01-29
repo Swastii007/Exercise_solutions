@@ -1,0 +1,33 @@
+---
+title: "Swasti_Rmarkdown"
+output: html_document
+date: "2024-01-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Making Art
+
+```{r}
+make_art <- function(seed = NULL) {
+  
+  if (!is.null(seed)) {
+    set.seed(seed)
+  }
+  
+# Generate random art 
+  art <- matrix(runif(100), ncol = 10, nrow = 10)
+  
+# Display the art 
+  
+  image(art, col = gray.colors(10))
+}
+
+#example:
+make_art()
+
+```
+
+
